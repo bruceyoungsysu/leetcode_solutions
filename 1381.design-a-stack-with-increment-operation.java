@@ -34,7 +34,12 @@ class CustomStack {
     }
     
     public void increment(int k, int val) {
-        
+        List<Integer> buffer = new ArrayList<>();
+        for(int i=0; i<list.size(); i++){
+            if(i<k) buffer.add(list.get(i)+val);
+            else buffer.add(list.get(i));
+        }
+        list = buffer;
     }
 }
 
